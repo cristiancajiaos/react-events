@@ -13,6 +13,10 @@ function App() {
     alert(text);
   }
 
+  const shootEvent = (a,b) => {
+    alert(b.type);
+  }
+
   return (
     <section className="container my-2">
       <button className="btn btn-primary" onClick={shoot}>Shoot</button>
@@ -21,6 +25,12 @@ function App() {
 
       <button className="btn btn-success" onClick={() => shootText("Goal!")}>
         Shoot to Goal
+      </button>
+
+      <hr/>
+
+      <button className="btn btn-danger" onClick={(event) => shootEvent("Goal!", event)}>
+        Shoot event
       </button>
     </section>
   )
