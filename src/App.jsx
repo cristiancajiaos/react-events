@@ -9,9 +9,19 @@ function App() {
     alert('Great shot!')
   }
 
+  const shootText = (text) => {
+    alert(text);
+  }
+
   return (
     <section className="container my-2">
       <button className="btn btn-primary" onClick={shoot}>Shoot</button>
+
+      <hr/>
+
+      <button className="btn btn-success" onClick={() => shootText("Goal!")}>
+        Shoot to Goal
+      </button>
     </section>
   )
 }
